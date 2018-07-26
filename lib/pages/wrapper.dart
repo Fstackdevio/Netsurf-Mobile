@@ -1,4 +1,3 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:lumous/utils/lumous.dart';
 import 'package:lumous/utils/nav.dart';
@@ -9,11 +8,13 @@ class WrapperScreen extends StatefulWidget {
 }
 
 class _WrapperScreenState extends State<WrapperScreen> {
-  
+
   @override
   void initState() {
     super.initState();
-    Timer(Duration(milliseconds: 8), () => SwiftNav.goToSplash(context));
+    setState(() {
+          
+        });
   }
 
   @override
@@ -43,7 +44,7 @@ class _WrapperScreenState extends State<WrapperScreen> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.amber,
         onPressed: () => {},
-        child: Icon(Icons.timeline, color: Colors.white),
+        child: Icon(Icons.flash_on, color: Colors.white),
       ),
     );
   }
