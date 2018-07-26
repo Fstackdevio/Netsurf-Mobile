@@ -12,9 +12,6 @@ class _WrapperScreenState extends State<WrapperScreen> {
   @override
   void initState() {
     super.initState();
-    setState(() {
-          
-        });
   }
 
   @override
