@@ -20,6 +20,10 @@ class Lumous {
 
   static const String login = "Login";
 
+  static const String quit_title = "Are You Sure?";
+  static const String dialog_yes = "YES";
+  static const String dialog_no = "NO";
+
 
   static const String settings = "Settings";
   static const String quit = "Quit";

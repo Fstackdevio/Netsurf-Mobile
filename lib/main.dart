@@ -12,7 +12,7 @@ var routes = <String, WidgetBuilder>{
 
 void main() => runApp(new MaterialApp(
     theme:
-        ThemeData(primaryColor: Colors.blueAccent, accentColor: Colors.yellowAccent,),
+        ThemeData(primaryColor: Colors.blueAccent, primarySwatch: Colors.black, accentColor: Colors.yellowAccent),
     debugShowCheckedModeBanner: false,
     home: SplashScreen(),
     routes: routes
