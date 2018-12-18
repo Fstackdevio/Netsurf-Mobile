@@ -1,4 +1,4 @@
-package com.example.lumous;
+package com.example.netsurfpro;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
