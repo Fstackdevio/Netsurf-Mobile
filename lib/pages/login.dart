@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netsurf_pro/pages/home.dart';
+import 'package:netsurf_pro/pages/wrapper.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -139,7 +139,7 @@ class _LoginScreenState extends State<LoginScreen>
                                 onTap: () {
                                   Navigator.of(context).push(MaterialPageRoute(
                                       builder: (BuildContext context) =>
-                                          HomeScreen()));
+                                          WrapperScreen()));
                                 },
                                 child: new Center(
                                   child: new Text('Login',

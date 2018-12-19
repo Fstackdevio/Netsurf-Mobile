@@ -9,7 +9,6 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    Size screenSize = MediaQuery.of(context).size;
     return new Scaffold(
       body: new Column(
         children: <Widget>[
@@ -113,66 +112,11 @@ class _HomeScreenState extends State<HomeScreen> {
                 style: new TextStyle(fontWeight: FontWeight.bold),
               )),
           new Container(
-            alignment: Alignment.topLeft,
+            alignment: Alignment.center,
             padding: EdgeInsets.all(30.0),
             child: new Text('Transaction cards appear here'),
           )
         ],
-      ),
-      floatingActionButton: new FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add_circle_outline),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: new BottomAppBar(
-        elevation: 0.0,
-        color: Colors.lightBlue,
-        shape: new CircularNotchedRectangle(),
-        notchMargin: 15.0,
-        child: new Container(
-          padding: EdgeInsets.all(10.0),
-          height: 50.0,
-          decoration: BoxDecoration(
-            color: Colors.lightBlue,
-          ),
-          child: new Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              new Container(
-                width: (screenSize.width - 20) / 4,
-                child: new IconButton(
-                  icon: Icon(Icons.home),
-                  color: Colors.white,
-                  onPressed: () {},
-                ),
-              ),
-              Container(
-                width: (screenSize.width - 20) / 4,
-                child: new IconButton(
-                  icon: Icon(Icons.home),
-                  color: Colors.white70,
-                  onPressed: () {},
-                ),
-              ),
-              Container(
-                width: (screenSize.width - 20) / 4,
-                child: new IconButton(
-                  icon: Icon(Icons.home),
-                  color: Colors.white70,
-                  onPressed: () {},
-                ),
-              ),
-              Container(
-                width: (screenSize.width - 20) / 4,
-                child: new IconButton(
-                  icon: Icon(Icons.home),
-                  color: Colors.white70,
-                  onPressed: () {},
-                ),
-              ),
-            ],
-          ),
-        ),
       ),
     );
   }
