@@ -71,8 +71,8 @@ class _LoginScreenState extends State<LoginScreen>
                               new SizedBox(width: 10.0),
                               new Container(
                                 padding:
-                                    EdgeInsets.fromLTRB(220.0, 110.0, 0.0, 0.0),
-                                child: new Text('  .',
+                                    EdgeInsets.fromLTRB(260.0, 125.0, 0.0, 0.0),
+                                child: new Text('.',
                                     style: new TextStyle(
                                         fontSize: 80.0,
                                         fontWeight: FontWeight.bold,
