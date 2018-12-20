@@ -15,14 +15,14 @@ class _LoginScreenState extends State<LoginScreen>
   void initState() {
     super.initState();
     animationController =
-        AnimationController(duration: Duration(seconds: 30), vsync: this);
+        AnimationController(duration: Duration(seconds: 3), vsync: this);
     animation = Tween(begin: -1.0, end: 0.0).animate(
-        CurvedAnimation(curve: Curves.elasticIn, parent: animationController));
+        CurvedAnimation(curve: Curves.fastOutSlowIn, parent: animationController));
     delayedAnimation = Tween(begin: -1.0, end: 0.0).animate(CurvedAnimation(
-        curve: Interval(0.5, 1.0, curve: Curves.elasticIn),
+        curve: Interval(0.5, 1.0, curve: Curves.fastOutSlowIn),
         parent: animationController));
     lastly = Tween(begin: -1.0, end: 0.0).animate(CurvedAnimation(
-        curve: Interval(0.8, 1.0, curve: Curves.elasticIn),
+        curve: Interval(0.8, 1.0, curve: Curves.fastOutSlowIn),
         parent: animationController));
   }
 
