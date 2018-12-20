@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:netsurf_pro/models/trans_model.dart';
 
-class TrandsCard extends StatefulWidget {
+class TransCard extends StatelessWidget {
+  final List<TransModel> data = transData;
 
   @override
-  _TransCardState createState() => new _TransCardState();
-}
-
-class _TransCardState extends State<TrandsCard>{
-  @override
-  Widget build(BuildContext context){
-    return new Scaffold();
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      itemCount: data.length,
+      itemBuilder: (context, index) {
+        return Card(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+          child: new Text('data'),
+        );
+      },
+    );
   }
 }
