@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:netsurf_pro/pages/home.dart';
 import 'package:netsurf_pro/pages/buydata.dart';
+import 'package:netsurf_pro/pages/sharedata.dart';
 
 class WrapperScreen extends StatefulWidget {
   @override
@@ -31,9 +32,7 @@ class _WrapperScreenState extends State<WrapperScreen> {
     List<Widget> _screens = [
       HomeScreen(),
       BuyData(),
-      Center(
-        child: new Text('Share Data'),
-      ),
+      ShareData(),
       Center(
         child: new Text('Login History'),
       ),
