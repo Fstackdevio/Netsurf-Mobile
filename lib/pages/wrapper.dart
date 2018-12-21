@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netsurf_pro/pages/home.dart';
+import 'package:netsurf_pro/pages/buydata.dart';
 
 class WrapperScreen extends StatefulWidget {
   @override
@@ -17,11 +18,19 @@ class _WrapperScreenState extends State<WrapperScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var card = new Card(
+      child: new Column(
+        children: <Widget>[
+          new ListTile(
+            title: new Text("Adeniyi Mayokun"),
+          )          
+        ],
+
+      ),
+    );
     List<Widget> _screens = [
       HomeScreen(),
-      Center(
-        child: new Text('Buy Data'),
-      ),
+      BuyData(),
       Center(
         child: new Text('Share Data'),
       ),

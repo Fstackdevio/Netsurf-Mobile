@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:netsurf_pro/models/trans_card.dart';
+import 'package:flutter/material.dart'; 
 import 'package:netsurf_pro/pages/notification.dart';
 import 'package:netsurf_pro/pages/settings.dart';
 
@@ -92,7 +91,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   style: new TextStyle(
                                       color: Colors.white,
                                       fontSize: 50.0,
-                                      fontWeight: FontWeight.bold)),
+                                      fontWeight: FontWeight.bold
+                                      )),
                               new Text(
                                 'Data Balance',
                                 style: new TextStyle(
