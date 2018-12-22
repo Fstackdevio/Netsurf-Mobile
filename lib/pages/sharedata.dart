@@ -21,20 +21,40 @@ class _ShareDataState extends State<ShareData>{
        new Text("Fill in the form below to share data", style: new TextStyle(fontWeight: FontWeight.w300),),
        Padding(padding: EdgeInsets.only(bottom: 30.0 ) ,),
 
-      TextField(decoration: InputDecoration(
+        new Container(
+          padding: 
+          EdgeInsets.only(left: 15.0, right: 15.0, bottom: 20.0),
+          
+      child: new TextField(decoration: InputDecoration(
          prefixIcon: Icon(Icons.person),
+      
          labelText: 'Enter receipient\'s username',
          labelStyle: TextStyle(fontWeight: FontWeight.w200, fontSize: 15.0, ),
   
        ),)
+        ),
+         new Container(
+          padding: 
+          EdgeInsets.only(left: 15.0, right: 15.0),
+          
+      child: new TextField(decoration: InputDecoration(
+         prefixIcon: Icon(Icons.fiber_pin),
+      
+         labelText: 'Enter secret pin',
+         labelStyle: TextStyle(fontWeight: FontWeight.w200, fontSize: 15.0, ),
+  
+       ),)
+        )
         ],
       )
       
       );
       final sizedBox = new Container(
-        margin: new EdgeInsets.only(left: 10.0,  right: 10.0),
+        padding: new EdgeInsets.only(left: 10.0,  right: 10.0,),
+
+         
         child: new SizedBox(
-          height: 420.0,
+          height: 450.0,
           width: 420.0,
           child: card,
         ),
@@ -44,8 +64,8 @@ class _ShareDataState extends State<ShareData>{
         child: sizedBox,
         );
       return new MaterialApp(
-        title: "",
-        home: new Scaffold(
+       
+      home: new Scaffold(
           
           body: center,
         )

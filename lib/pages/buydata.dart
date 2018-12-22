@@ -13,11 +13,15 @@ class _BuyDataState extends State<BuyData>{
     var card =  new Card(
       child: new Column(
         children: <Widget>[
-          new ListTile(
-          leading: Icon(Icons.account_box, color: Colors.blue,size: 26.0),
-          title: new Text("Adeniyi Mayokun", style: new TextStyle(fontWeight: FontWeight.w400),),
-          subtitle: new Text("Software Developer at FStackDev"),
-          )
+
+          new IconButton(color: Colors.blue,
+         icon: Icon(Icons.shopping_cart),
+         iconSize: 120.0,
+         padding: const EdgeInsets.only(top: 10.0, bottom: 15.0),
+       ),
+       new Text("Fill in the form below to buy data", style: new TextStyle(fontWeight: FontWeight.w300),),
+       Padding(padding: EdgeInsets.only(bottom: 30.0 ) ,),
+          
 
         ],
 
@@ -27,6 +31,7 @@ class _BuyDataState extends State<BuyData>{
         margin: new EdgeInsets.only(left: 10.0,  right: 10.0),
         child: new SizedBox(
           height: 420.0,
+          width: 420.0,
           child: card,
         ),
       );
