@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:netsurf_pro/pages/buy.dart';
 import 'package:netsurf_pro/pages/home.dart';
-import 'package:netsurf_pro/pages/buydata.dart';
-import 'package:netsurf_pro/pages/sharedata.dart';
+import 'package:netsurf_pro/pages/share.dart';
 
 class WrapperScreen extends StatefulWidget {
   @override
@@ -19,20 +19,10 @@ class _WrapperScreenState extends State<WrapperScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var card = new Card(
-      child: new Column(
-        children: <Widget>[
-          new ListTile(
-            title: new Text("Adeniyi Mayokun"),
-          )          
-        ],
-
-      ),
-    );
     List<Widget> _screens = [
       HomeScreen(),
-      BuyData(),
-      ShareData(),
+      BuyScreen(),
+      ShareScreen(),
       Center(
         child: new Text('Login History'),
       ),
@@ -43,7 +33,7 @@ class _WrapperScreenState extends State<WrapperScreen> {
       floatingActionButton: new FloatingActionButton(
         onPressed: () {},
         backgroundColor: Colors.blue,
-        child: new Icon(Icons.flight),
+        child: new Icon(Icons.flash_on),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomNavigationBar(
