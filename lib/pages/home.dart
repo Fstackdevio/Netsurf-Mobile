@@ -107,18 +107,65 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             new Container(
                 alignment: Alignment.topCenter,
-                padding: EdgeInsets.only(top:20.0, left: 20.0, right: 20.0, bottom: 10.0),
+                padding: EdgeInsets.only(top:20.0,left: 20.0, right: 20.0, bottom: 10.0),
                 child: new Text(
-                  'Transactions',
-                  style: new TextStyle(fontWeight: FontWeight.w300, fontSize: 15.0),
+                  'Hey! Scroll through your recent transactions',
+                  style: new TextStyle(fontWeight: FontWeight.w200, fontSize: 14.0),
                 )),
             new Container(
               padding: EdgeInsets.only(left: 10.0, right: 10.0),
               height: 200.0,
               width: double.infinity,
-              child: new Card(
-                elevation: 16.0, color: Colors.grey[300], clipBehavior: Clip.hardEdge,
-              )
+           child: new ListView(
+             scrollDirection: Axis.horizontal,
+             shrinkWrap: true,
+             children: <Widget>[
+               new Container(
+                 height: 300.0,
+                 width: 270.0,
+                 child: new Card(
+                elevation: 3.0, color: Colors.grey[500], clipBehavior: Clip.hardEdge,
+               child: new Column(
+                 children: <Widget>[
+                   ],
+               )
+              ),
+               ),
+              new Container(
+                height: 300.0,
+                 width: 270.0,
+                 child: new Card(
+                elevation: 3.0, color: Colors.grey[500], clipBehavior: Clip.hardEdge,
+               child: new Column(
+                 children: <Widget>[
+                   ],
+               )
+              ),
+              ),
+            new Container(
+              height: 300.0,
+                 width: 270.0,
+                child: new Card(
+                elevation: 3.0, color: Colors.grey[500], clipBehavior: Clip.hardEdge,
+               child: new Column(
+                 children: <Widget>[
+                   ],
+               )
+              ),
+            ),
+            new Container(
+              height: 300.0,
+                 width: 270.0,
+                child: new Card(
+                elevation: 3.0, color: Colors.grey[500], clipBehavior: Clip.hardEdge,
+               child: new Column(
+                 children: <Widget>[
+                   ],
+               )
+              ),
+            ),
+             ],
+           ),
             )
           ],
         ));
