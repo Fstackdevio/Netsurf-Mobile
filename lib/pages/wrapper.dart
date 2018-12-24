@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:netsurf_pro/pages/buy.dart';
+import 'package:netsurf_pro/pages/buydata.dart';
 import 'package:netsurf_pro/pages/home.dart';
-import 'package:netsurf_pro/pages/share.dart';
+import 'package:netsurf_pro/pages/sharedata.dart';
 
 class WrapperScreen extends StatefulWidget {
   @override
@@ -21,8 +21,8 @@ class _WrapperScreenState extends State<WrapperScreen> {
   Widget build(BuildContext context) {
     List<Widget> _screens = [
       HomeScreen(),
-      BuyScreen(),
-      ShareScreen(),
+      BuyData(),
+      ShareData(),
       Center(
         child: new Text('Login History'),
       ),
@@ -30,12 +30,6 @@ class _WrapperScreenState extends State<WrapperScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: _screens[_currentIndex],
-      floatingActionButton: new FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: Colors.blue,
-        child: new Icon(Icons.flash_on),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         type: BottomNavigationBarType.fixed,

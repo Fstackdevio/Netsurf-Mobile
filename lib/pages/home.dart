@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:netsurf_pro/models/trans_card.dart';
 import 'package:netsurf_pro/pages/notification.dart';
 import 'package:netsurf_pro/pages/settings.dart';
 
