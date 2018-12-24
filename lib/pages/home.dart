@@ -82,20 +82,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 new Column(
                   children: <Widget>[
                     new Padding(
-                        padding: EdgeInsets.only(top: 50.0),
+                        padding: EdgeInsets.only(top: 20.0),
                         child: Container(
                           alignment: Alignment.center,
                           child: new Column(
                             children: <Widget>[
-                              new Text('400',
+                              new Text('400.0',
                                   style: new TextStyle(
                                       color: Colors.white,
-                                      fontSize: 50.0,
-                                      fontWeight: FontWeight.bold)),
+                                      fontSize: 100.0,
+                                      fontWeight: FontWeight.w200)),
                               new Text(
                                 'Data Balance',
                                 style: new TextStyle(
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w400,
                                     color: Colors.white),
                               )
                             ],
@@ -106,16 +106,19 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
             new Container(
-                alignment: Alignment.topLeft,
-                padding: EdgeInsets.all(20.0),
+                alignment: Alignment.topCenter,
+                padding: EdgeInsets.only(top:20.0, left: 20.0, right: 20.0, bottom: 10.0),
                 child: new Text(
                   'Transactions',
-                  style: new TextStyle(fontWeight: FontWeight.bold),
+                  style: new TextStyle(fontWeight: FontWeight.w300, fontSize: 15.0),
                 )),
             new Container(
-              alignment: Alignment.center,
-              child: Text('Transaction cards is proving difficult to do')
-              //child: TransCard(),
+              padding: EdgeInsets.only(left: 10.0, right: 10.0),
+              height: 200.0,
+              width: double.infinity,
+              child: new Card(
+                elevation: 16.0, color: Colors.grey[300], clipBehavior: Clip.hardEdge,
+              )
             )
           ],
         ));

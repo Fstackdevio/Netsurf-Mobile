@@ -69,7 +69,7 @@ class _BuyDataState extends State<BuyData>{
         new Container(
           padding: EdgeInsets.only(top: 40.0),
           child: new Center(
-            child: new RaisedButton(
+            child: new RaisedButton( color: Colors.blue,
               child: const Text("Done"),
               elevation: 4.0,
               onPressed: (null),
