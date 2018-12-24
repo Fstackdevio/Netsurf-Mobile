@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netsurf_pro/models/trans_card.dart';
 import 'package:netsurf_pro/pages/notification.dart';
 import 'package:netsurf_pro/pages/settings.dart';
 
@@ -46,172 +47,83 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
-        body: new Column(
-          children: <Widget>[
-            new Stack(
-              children: <Widget>[
-                new Container(
-                  height: 200.0,
-                  width: double.infinity,
-                  color: Colors.blue,
-                ),
-                new Positioned(
-                  bottom: 50.0,
-                  right: 100.0,
-                  child: new Container(
-                    height: 400.0,
-                    width: 400.0,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(200),
-                      color: Colors.blueAccent.withOpacity(0.4),
+        body: SingleChildScrollView(
+          child: new Column(
+            children: <Widget>[
+              new Stack(
+                children: <Widget>[
+                  new Container(
+                    height: 200.0,
+                    width: double.infinity,
+                    color: Colors.blue,
+                  ),
+                  new Positioned(
+                    bottom: 50.0,
+                    right: 100.0,
+                    child: new Container(
+                      height: 400.0,
+                      width: 400.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(200),
+                        color: Colors.blueAccent.withOpacity(0.4),
+                      ),
                     ),
                   ),
-                ),
-                new Positioned(
-                  bottom: 100.0,
-                  left: 150.0,
-                  child: new Container(
-                    height: 300.0,
-                    width: 300.0,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(200),
-                      color: Colors.blueAccent.withOpacity(0.5),
+                  new Positioned(
+                    bottom: 100.0,
+                    left: 150.0,
+                    child: new Container(
+                      height: 300.0,
+                      width: 300.0,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(200),
+                        color: Colors.blueAccent.withOpacity(0.5),
+                      ),
                     ),
                   ),
-                ),
-                new Column(
-                  children: <Widget>[
-                    new Padding(
-                        padding: EdgeInsets.only(top: 20.0),
-                        child: Container(
-                          alignment: Alignment.center,
-                          child: new Column(
-                            children: <Widget>[
-                              new Text('400.0',
+                  new Column(
+                    children: <Widget>[
+                      new Padding(
+                          padding: EdgeInsets.only(top: 20.0),
+                          child: Container(
+                            alignment: Alignment.center,
+                            child: new Column(
+                              children: <Widget>[
+                                new Text('400.0',
+                                    style: new TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 100.0,
+                                        fontWeight: FontWeight.w200)),
+                                new Text(
+                                  'Data Balance',
                                   style: new TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 100.0,
-                                      fontWeight: FontWeight.w200)),
-                              new Text(
-                                'Data Balance',
-                                style: new TextStyle(
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.white),
-                              )
-                            ],
-                          ),
-                        ))
-                  ],
-                )
-              ],
-            ),
-            new Container(
-                alignment: Alignment.topCenter,
-                padding: EdgeInsets.only(top:20.0,left: 20.0, right: 20.0, bottom: 10.0),
-                child: new Text(
-                  'Hey! Scroll through your recent transactions',
-                  style: new TextStyle(fontWeight: FontWeight.w300, fontSize: 14.0),
-                )),
-            new Container(
-              padding: EdgeInsets.only(left: 10.0, right: 10.0),
-              height: 200.0,
-              width: double.infinity,
-           child: new ListView(
-             scrollDirection: Axis.horizontal,
-             shrinkWrap: true,
-             children: <Widget>[
-               new Container(
-                 height: 300.0,
-                 width: 270.0,
-                 child: new Card(
-                elevation: 3.0, color: Colors.grey[500], clipBehavior: Clip.hardEdge,
-               child: new Column(
-                 children: <Widget>[
-                   new Container(
-                     alignment: Alignment.topCenter,
-                     padding: EdgeInsets.only(top: 15.0),
-                     child: new Icon(Icons.access_time, size: 90.0, color: Colors.white),
-                   ),
-                    new Container(
-                     alignment: Alignment.bottomCenter,
-                     padding: EdgeInsets.only(bottom: 10.0, top: 20.0,left: 5.0,right: 5.0),
-                     child: new Text('Used 200.56 MB in the last hour',
-                     style: new TextStyle(fontWeight: FontWeight.w300, color: Colors.white),),
-                   )
-                   ],
-               )
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.white),
+                                )
+                              ],
+                            ),
+                          ))
+                    ],
+                  )
+                ],
               ),
-               ),
               new Container(
-                height: 300.0,
-                 width: 270.0,
-                 child: new Card(
-                elevation: 3.0, color: Colors.grey[400], clipBehavior: Clip.hardEdge,
-               child: new Column(
-                 children: <Widget>[
-                    new Container(
-                     alignment: Alignment.topCenter,
-                     padding: EdgeInsets.only(top: 15.0),
-                     child: new Icon(Icons.exit_to_app, size: 90.0, color: Colors.white),
-                   ),
-                   new Container(
-                     alignment: Alignment.bottomCenter,
-                     padding: EdgeInsets.only(bottom: 10.0, top: 20.0,left: 5.0,right: 5.0),
-                     child: new Text('Sent 500 MB to adeojo.immanuel',
-                     style: new TextStyle(fontWeight: FontWeight.w300, color: Colors.white),),
-                   )
-                   ],
-               )
-              ),
-              ),
-            new Container(
-              height: 300.0,
-                 width: 270.0,
-                child: new Card(
-                elevation: 3.0, color: Colors.grey[500], clipBehavior: Clip.hardEdge,
-               child: new Column(
-                 children: <Widget>[
-                    new Container(
-                     alignment: Alignment.topCenter,
-                     padding: EdgeInsets.only(top: 15.0),
-                     child: new Icon(Icons.import_export, size: 90.0, color: Colors.white),
-                   ),
-                    new Container(
-                     alignment: Alignment.bottomCenter,
-                     padding: EdgeInsets.only(bottom: 10.0, top: 20.0,left: 5.0,right: 5.0),
-                     child: new Text('Received 1 GB from kalango.michael',
-                     style: new TextStyle(fontWeight: FontWeight.w300, color: Colors.white),),
-                   )
-                   ],
-               )
-              ),
-            ),
-            new Container(
-              height: 300.0,
-                 width: 270.0,
-                child: new Card(
-                elevation: 3.0, color: Colors.grey[400], clipBehavior: Clip.hardEdge,
-               child: new Column(
-                 children: <Widget>[
-                    new Container(
-                     alignment: Alignment.topCenter,
-                     padding: EdgeInsets.only(top: 15.0),
-                     child: new Icon(Icons.timelapse, size: 90.0, color: Colors.white),
-                   ),
-                    new Container(
-                     alignment: Alignment.bottomCenter,
-                     padding: EdgeInsets.only(bottom: 10.0, top: 20.0,left: 5.0,right: 5.0),
-                     child: new Text('Sent 300 MB to adegoke.david',
-                     style: new TextStyle(fontWeight: FontWeight.w300, color: Colors.white),),
-                   )
-                   ],
-               )
-              ),
-            ),
-             ],
-           ),
-            )
-          ],
+                  alignment: Alignment.topCenter,
+                  padding: EdgeInsets.only(
+                      top: 20.0, left: 20.0, right: 20.0, bottom: 10.0),
+                  child: new Text(
+                    'Hey! Scroll through your recent transactions',
+                    style: new TextStyle(
+                        fontWeight: FontWeight.w300, fontSize: 14.0),
+                  )),
+              new Container(
+                padding: EdgeInsets.only(left: 10.0, right: 10.0),
+                height: 200.0,
+                width: double.infinity,
+                child: new TransCard(),
+              )
+            ],
+          ),
         ));
   }
 }
