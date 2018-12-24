@@ -26,7 +26,10 @@ class _ShareDataState extends State<ShareData>{
           EdgeInsets.only(left: 20.0, right: 20.0, bottom: 20.0),
           
       child: new TextField(decoration: InputDecoration(
-         prefixIcon: Icon(Icons.person),
+         prefixIcon: Icon(Icons.person), border: OutlineInputBorder(
+           borderRadius: BorderRadius.circular(20.0)
+         ),
+         contentPadding: const EdgeInsets.only(left: 10.0, right: 10.0),
          
          labelText: 'Enter receipient\'s username',
          labelStyle: TextStyle(fontWeight: FontWeight.w200, fontSize: 15.0, ),
@@ -39,13 +42,17 @@ class _ShareDataState extends State<ShareData>{
           EdgeInsets.only(left: 20.0, right: 20.0),
           
       child: new TextField(decoration: InputDecoration(
-         prefixIcon: Icon(Icons.fiber_pin),
+         prefixIcon: Icon(Icons.fiber_pin), border: OutlineInputBorder(
+           borderRadius: BorderRadius.circular(20.0)
+         ),
+         contentPadding: const EdgeInsets.only(left: 10.0,right: 10.0),
       
          labelText: 'Enter secret pin',
          labelStyle: TextStyle(fontWeight: FontWeight.w200, fontSize: 15.0, ),
   
        ),)
         )
+        
         ],
       )
       

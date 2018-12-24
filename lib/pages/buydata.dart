@@ -26,7 +26,10 @@ class _BuyDataState extends State<BuyData>{
           EdgeInsets.only(left: 15.0, right: 15.0),
           
       child: new TextFormField(decoration: InputDecoration(
-         prefixIcon: Icon(Icons.fiber_pin),
+         prefixIcon: Icon(Icons.fiber_pin), border: OutlineInputBorder(
+           borderRadius: BorderRadius.circular(20.0)
+         ),
+         contentPadding: const EdgeInsets.only(left: 10.0,right: 10.0),
       
          labelText: 'Enter secret pin',
          labelStyle: TextStyle(fontWeight: FontWeight.w200, fontSize: 15.0, ),

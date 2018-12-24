@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:netsurf_pro/pages/buydata.dart';
 import 'package:netsurf_pro/pages/home.dart';
 import 'package:netsurf_pro/pages/sharedata.dart';
+import 'package:netsurf_pro/pages/loginhistory.dart';
 
 class WrapperScreen extends StatefulWidget {
   @override
@@ -23,9 +24,7 @@ class _WrapperScreenState extends State<WrapperScreen> {
       HomeScreen(),
       BuyData(),
       ShareData(),
-      Center(
-        child: new Text('Login History'),
-      ),
+      LoginHistory()
     ];
     return Scaffold(
       backgroundColor: Colors.white,
