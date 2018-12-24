@@ -110,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 padding: EdgeInsets.only(top:20.0,left: 20.0, right: 20.0, bottom: 10.0),
                 child: new Text(
                   'Hey! Scroll through your recent transactions',
-                  style: new TextStyle(fontWeight: FontWeight.w200, fontSize: 14.0),
+                  style: new TextStyle(fontWeight: FontWeight.w300, fontSize: 14.0),
                 )),
             new Container(
               padding: EdgeInsets.only(left: 10.0, right: 10.0),
@@ -127,6 +127,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 elevation: 3.0, color: Colors.grey[500], clipBehavior: Clip.hardEdge,
                child: new Column(
                  children: <Widget>[
+                   new Container(
+                     alignment: Alignment.topCenter,
+                     padding: EdgeInsets.only(top: 15.0),
+                     child: new Icon(Icons.access_time, size: 90.0, color: Colors.white),
+                   ),
+                    new Container(
+                     alignment: Alignment.bottomCenter,
+                     padding: EdgeInsets.only(bottom: 10.0, top: 20.0,left: 5.0,right: 5.0),
+                     child: new Text('Used 200.56 MB in the last hour',
+                     style: new TextStyle(fontWeight: FontWeight.w300, color: Colors.white),),
+                   )
                    ],
                )
               ),
@@ -135,9 +146,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 300.0,
                  width: 270.0,
                  child: new Card(
-                elevation: 3.0, color: Colors.grey[500], clipBehavior: Clip.hardEdge,
+                elevation: 3.0, color: Colors.grey[400], clipBehavior: Clip.hardEdge,
                child: new Column(
                  children: <Widget>[
+                    new Container(
+                     alignment: Alignment.topCenter,
+                     padding: EdgeInsets.only(top: 15.0),
+                     child: new Icon(Icons.exit_to_app, size: 90.0, color: Colors.white),
+                   ),
+                   new Container(
+                     alignment: Alignment.bottomCenter,
+                     padding: EdgeInsets.only(bottom: 10.0, top: 20.0,left: 5.0,right: 5.0),
+                     child: new Text('Sent 500 MB to adeojo.immanuel',
+                     style: new TextStyle(fontWeight: FontWeight.w300, color: Colors.white),),
+                   )
                    ],
                )
               ),
@@ -149,6 +171,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 elevation: 3.0, color: Colors.grey[500], clipBehavior: Clip.hardEdge,
                child: new Column(
                  children: <Widget>[
+                    new Container(
+                     alignment: Alignment.topCenter,
+                     padding: EdgeInsets.only(top: 15.0),
+                     child: new Icon(Icons.import_export, size: 90.0, color: Colors.white),
+                   ),
+                    new Container(
+                     alignment: Alignment.bottomCenter,
+                     padding: EdgeInsets.only(bottom: 10.0, top: 20.0,left: 5.0,right: 5.0),
+                     child: new Text('Received 1 GB from kalango.michael',
+                     style: new TextStyle(fontWeight: FontWeight.w300, color: Colors.white),),
+                   )
                    ],
                )
               ),
@@ -157,9 +190,20 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 300.0,
                  width: 270.0,
                 child: new Card(
-                elevation: 3.0, color: Colors.grey[500], clipBehavior: Clip.hardEdge,
+                elevation: 3.0, color: Colors.grey[400], clipBehavior: Clip.hardEdge,
                child: new Column(
                  children: <Widget>[
+                    new Container(
+                     alignment: Alignment.topCenter,
+                     padding: EdgeInsets.only(top: 15.0),
+                     child: new Icon(Icons.timelapse, size: 90.0, color: Colors.white),
+                   ),
+                    new Container(
+                     alignment: Alignment.bottomCenter,
+                     padding: EdgeInsets.only(bottom: 10.0, top: 20.0,left: 5.0,right: 5.0),
+                     child: new Text('Sent 300 MB to adegoke.david',
+                     style: new TextStyle(fontWeight: FontWeight.w300, color: Colors.white),),
+                   )
                    ],
                )
               ),
