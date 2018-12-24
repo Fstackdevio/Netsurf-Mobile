@@ -55,7 +55,7 @@ class _ShareDataState extends State<ShareData>{
          
         child: new SizedBox(
           height: 450.0,
-          width: 420.0,
+          width: double.infinity,
           child: card,
         ),
       );

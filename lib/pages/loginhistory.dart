@@ -8,6 +8,11 @@ class LoginHistory extends StatefulWidget{
 
 class _LoginHistoryState extends State<LoginHistory>{
   Widget build(BuildContext context){
-    
+
+    return new MaterialApp(
+      home: new Scaffold(
+
+      ),
+    );
   }
 }

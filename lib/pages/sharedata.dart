@@ -51,6 +51,18 @@ class _ShareDataState extends State<ShareData>{
          labelStyle: TextStyle(fontWeight: FontWeight.w200, fontSize: 15.0, ),
   
        ),)
+        ),
+
+        new Container(
+          padding: EdgeInsets.only(top: 70.0),
+          child: new Center(
+            child: new RaisedButton(
+              child: const Text("Done"),
+              elevation: 4.0,
+              onPressed: (null),
+              splashColor: Colors.blue,
+            )
+          ),
         )
         
         ],
