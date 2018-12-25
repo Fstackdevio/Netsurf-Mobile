@@ -7,11 +7,59 @@ class LoginHistory extends StatefulWidget{
 }
 
 class _LoginHistoryState extends State<LoginHistory>{
+
+  @override
   Widget build(BuildContext context){
-
-    return new MaterialApp(
-      home: new Scaffold(
-
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: new Column(
+          children: <Widget>[
+            new Stack(
+              children: <Widget>[
+                new Container(
+                    height: 250.0,
+                    width: double.infinity,
+                    color: Colors.blue,
+                  ),
+                  new Column(
+                    children: <Widget>[
+                      new Padding(
+                          padding: EdgeInsets.only(top: 20.0),
+                          child: Container(
+                            alignment: Alignment.center,
+                            child: new Column(
+                              children: <Widget>[
+                                new Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    //borderRadius: BorderRadius.all(radius: 60.0),
+                                  ),
+                                  child: Text('testing'),
+                                ),
+                                new Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: <Widget>[
+                                    IconButton(
+                                      icon: Icon(Icons.filter_list),
+                                      color: Colors.white,
+                                      onPressed: (){},
+                                    ),
+                                    IconButton(
+                                      icon: Icon(Icons.error),
+                                      color: Colors.white,
+                                      onPressed: (){},
+                                    )
+                                  ],
+                                )
+                              ],
+                            ),
+                          ))
+                    ],
+                  )
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

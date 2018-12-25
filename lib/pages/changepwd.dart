@@ -38,7 +38,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                 new Row(children: <Widget>[
                   Center(
                     child: new Text(
-                      'Please fill the form below to change your password',
+                      'Please fill the form below \n to change your password',
                       style: new TextStyle(
                         fontSize: 15.0,
                         fontWeight: FontWeight.bold,

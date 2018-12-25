@@ -422,6 +422,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       max: 100.0,
                       activeColor: Colors.blueAccent,
                       inactiveColor: Colors.grey,
+                      onChanged: null,
                     )),
                 new Container(
                   padding: EdgeInsets.only(left: 40, right: 40),
