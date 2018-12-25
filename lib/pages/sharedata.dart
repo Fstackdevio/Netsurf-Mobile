@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netsurf_pro/tools/ensure_visible.dart';
 
 class ShareData extends StatefulWidget {
   @override
@@ -6,6 +7,11 @@ class ShareData extends StatefulWidget {
 }
 
 class _ShareDataState extends State<ShareData> {
+  FocusNode _focusReciever = new FocusNode();
+  TextEditingController ctrlReciever = new TextEditingController();
+  FocusNode _focusPin = new FocusNode();
+  TextEditingController ctrlPin = new TextEditingController();
+
   Widget build(BuildContext context) {
     return Scaffold(
         body: SingleChildScrollView(
@@ -39,33 +45,43 @@ class _ShareDataState extends State<ShareData> {
                   new Container(
                       padding: EdgeInsets.only(
                           left: 20.0, right: 20.0, bottom: 20.0),
-                      child: new TextField(
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.person),
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20.0)),
-                          contentPadding:
-                              const EdgeInsets.only(left: 10.0, right: 10.0),
-                          labelText: 'Enter receipient\'s username',
-                          labelStyle: TextStyle(
-                            fontWeight: FontWeight.w200,
-                            fontSize: 15.0,
+                      child: EnsureVisible(
+                        focusNode: _focusReciever,
+                        child: new TextField(
+                          controller: ctrlReciever,
+                          focusNode: _focusReciever,
+                          decoration: InputDecoration(
+                            prefixIcon: Icon(Icons.person),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20.0)),
+                            contentPadding:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            labelText: 'Enter receipient\'s username',
+                            labelStyle: TextStyle(
+                              fontWeight: FontWeight.w200,
+                              fontSize: 15.0,
+                            ),
                           ),
                         ),
                       )),
                   new Container(
                       padding: EdgeInsets.only(left: 20.0, right: 20.0),
-                      child: new TextField(
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.fiber_pin),
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20.0)),
-                          contentPadding:
-                              const EdgeInsets.only(left: 10.0, right: 10.0),
-                          labelText: 'Enter secret pin',
-                          labelStyle: TextStyle(
-                            fontWeight: FontWeight.w200,
-                            fontSize: 15.0,
+                      child: EnsureVisible(
+                        focusNode: _focusPin,
+                        child: new TextField(
+                          controller: ctrlPin,
+                          focusNode: _focusPin,
+                          decoration: InputDecoration(
+                            prefixIcon: Icon(Icons.fiber_pin),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20.0)),
+                            contentPadding:
+                                const EdgeInsets.only(left: 10.0, right: 10.0),
+                            labelText: 'Enter secret pin',
+                            labelStyle: TextStyle(
+                              fontWeight: FontWeight.w200,
+                              fontSize: 15.0,
+                            ),
                           ),
                         ),
                       )),

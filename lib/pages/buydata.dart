@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netsurf_pro/tools/ensure_visible.dart';
 
 class BuyData extends StatefulWidget {
   @override
@@ -6,6 +7,9 @@ class BuyData extends StatefulWidget {
 }
 
 class _BuyDataState extends State<BuyData> {
+  FocusNode _focusPin = new FocusNode();
+  TextEditingController ctrlPin = new TextEditingController();
+
   int selected = 0;
   List<DropdownMenuItem<String>> _listDrop = [];
   String _selectedPlan;
@@ -24,8 +28,6 @@ class _BuyDataState extends State<BuyData> {
     });
   }
 
-  TextEditingController ctrlPin = new TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +42,8 @@ class _BuyDataState extends State<BuyData> {
                 child: new Column(
                   children: <Widget>[
                     Padding(
-                      padding: const EdgeInsets.only(top: 10.0, bottom: 15.0),
+                      padding:
+                          const EdgeInsets.only(top: 10.0, bottom: 15.0),
                       child: Icon(
                         Icons.shopping_basket,
                         color: Colors.blue,
@@ -57,19 +60,24 @@ class _BuyDataState extends State<BuyData> {
                       changedDropDownPlan: changeDataType,
                     ),
                     Container(
-                      padding:
-                          EdgeInsets.only(left: 20.0, right: 20.0, top: 30.0),
-                      child: new TextField(
-                        controller: ctrlPin,
-                        decoration: InputDecoration(
-                          prefixIcon: Icon(Icons.fiber_pin),
-                          border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(20.0)),
-                          contentPadding:
-                              const EdgeInsets.only(left: 10.0, right: 10.0),
-                          labelText: 'Enter Secret Pin',
-                          labelStyle: TextStyle(
-                              fontWeight: FontWeight.w200, fontSize: 15.0),
+                      padding: EdgeInsets.only(
+                          left: 20.0, right: 20.0, top: 30.0),
+                      child: EnsureVisible(
+                        focusNode: _focusPin,
+                        child: new TextField(
+                          controller: ctrlPin,
+                          focusNode: _focusPin,
+                          decoration: InputDecoration(
+                            prefixIcon: Icon(Icons.fiber_pin),
+                            border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(20.0)),
+                            contentPadding: const EdgeInsets.only(
+                                left: 10.0, right: 10.0),
+                            labelText: 'Enter Secret Pin',
+                            labelStyle: TextStyle(
+                                fontWeight: FontWeight.w200,
+                                fontSize: 15.0),
+                          ),
                         ),
                       ),
                     ),
@@ -96,7 +104,8 @@ class _BuyDataState extends State<BuyData> {
 }
 
 Widget _dataDropDown(
-    {String text, String selectPlan,
+    {String text,
+    String selectPlan,
     List<DropdownMenuItem<String>> listDrop,
     ValueChanged<String> changedDropDownPlan}) {
   return new DropdownButtonHideUnderline(
@@ -106,8 +115,8 @@ Widget _dataDropDown(
           value: selectPlan,
           items: listDrop,
           onChanged: changedDropDownPlan,
-          hint: new Text(text,
-              style: new TextStyle(fontWeight: FontWeight.w600)),
+          hint:
+              new Text(text, style: new TextStyle(fontWeight: FontWeight.w600)),
         ),
       ),
     ),

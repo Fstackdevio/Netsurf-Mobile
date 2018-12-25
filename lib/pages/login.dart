@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netsurf_pro/pages/wrapper.dart';
+import 'package:netsurf_pro/tools/ensure_visible.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -16,8 +17,8 @@ class _LoginScreenState extends State<LoginScreen>
     super.initState();
     animationController =
         AnimationController(duration: Duration(seconds: 3), vsync: this);
-    animation = Tween(begin: -1.0, end: 0.0).animate(
-        CurvedAnimation(curve: Curves.fastOutSlowIn, parent: animationController));
+    animation = Tween(begin: -1.0, end: 0.0).animate(CurvedAnimation(
+        curve: Curves.fastOutSlowIn, parent: animationController));
     delayedAnimation = Tween(begin: -1.0, end: 0.0).animate(CurvedAnimation(
         curve: Interval(0.5, 1.0, curve: Curves.fastOutSlowIn),
         parent: animationController));
@@ -34,6 +35,8 @@ class _LoginScreenState extends State<LoginScreen>
     });
   }
 
+  FocusNode _focusUser = new FocusNode();
+  FocusNode _focusPass = new FocusNode();
   TextEditingController ctrlUser = new TextEditingController();
   TextEditingController ctrlPass = new TextEditingController();
 
@@ -90,34 +93,42 @@ class _LoginScreenState extends State<LoginScreen>
                               top: 35.0, left: 20.0, right: 20.0),
                           child: new Column(
                             children: <Widget>[
-                              new TextField(
-                                controller: ctrlUser,
-                                decoration: InputDecoration(
-                                    prefixIcon: Icon(Icons.person_outline),
-                                    labelText: 'Username',
-                                    labelStyle: new TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.grey),
-                                    focusedBorder: OutlineInputBorder(
-                                        borderSide:
-                                            BorderSide(color: Colors.blue))),
+                              EnsureVisible(
+                                focusNode: _focusUser,
+                                child: new TextField(
+                                  controller: ctrlUser,
+                                  focusNode: _focusUser,
+                                  decoration: InputDecoration(
+                                      prefixIcon: Icon(Icons.person_outline),
+                                      labelText: 'Username',
+                                      labelStyle: new TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.grey),
+                                      focusedBorder: OutlineInputBorder(
+                                          borderSide:
+                                              BorderSide(color: Colors.blue))),
+                                ),
                               ),
                               new SizedBox(height: 10.0),
-                              new TextField(
-                                controller: ctrlPass,
-                                obscureText: _obsureText,
-                                decoration: InputDecoration(
-                                    prefixIcon: Icon(Icons.lock_outline),
-                                    labelText: 'Password',
-                                    suffixIcon: IconButton(
-                                        icon: Icon(Icons.visibility),
-                                        onPressed: _toggle),
-                                    labelStyle: new TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.grey),
-                                    focusedBorder: OutlineInputBorder(
-                                        borderSide:
-                                            BorderSide(color: Colors.blue))),
+                              EnsureVisible(
+                                focusNode: _focusPass,
+                                child: new TextField(
+                                  controller: ctrlPass,
+                                  focusNode: _focusPass,
+                                  obscureText: _obsureText,
+                                  decoration: InputDecoration(
+                                      prefixIcon: Icon(Icons.lock_outline),
+                                      labelText: 'Password',
+                                      suffixIcon: IconButton(
+                                          icon: Icon(Icons.visibility),
+                                          onPressed: _toggle),
+                                      labelStyle: new TextStyle(
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.grey),
+                                      focusedBorder: OutlineInputBorder(
+                                          borderSide:
+                                              BorderSide(color: Colors.blue))),
+                                ),
                               )
                             ],
                           ),

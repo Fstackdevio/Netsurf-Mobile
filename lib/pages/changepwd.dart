@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netsurf_pro/tools/ensure_visible.dart';
 
 class ChangePassword extends StatefulWidget {
   @override
@@ -6,6 +7,11 @@ class ChangePassword extends StatefulWidget {
 }
 
 class _ChangePasswordState extends State<ChangePassword> {
+  FocusNode _focusUser = new FocusNode();
+  FocusNode _focusOldPwd = new FocusNode();
+  FocusNode _focusNewPwd = new FocusNode();
+  FocusNode _focusConfirmPwd = new FocusNode();
+  FocusNode _focusPin = new FocusNode();
   TextEditingController ctrlUser = new TextEditingController();
   TextEditingController ctrlOldPwd = new TextEditingController();
   TextEditingController ctrlNewPwd = new TextEditingController();
@@ -35,19 +41,6 @@ class _ChangePasswordState extends State<ChangePassword> {
                 new SizedBox(
                   height: 30.0,
                 ),
-                new Row(children: <Widget>[
-                  Center(
-                    child: new Text(
-                      'Please fill the form below \n to change your password',
-                      style: new TextStyle(
-                        fontSize: 15.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ]),
-                SizedBox(height: 30.0),
                 new Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: new Text(
@@ -64,13 +57,17 @@ class _ChangePasswordState extends State<ChangePassword> {
                         child: new Padding(
                             padding:
                                 const EdgeInsets.only(left: 8.0, right: 8.0),
-                            child: new TextField(
-                                controller: ctrlUser,
-                                keyboardType: TextInputType.text,
-                                decoration: new InputDecoration(
-                                  border: InputBorder.none,
-                                  hintText: 'john.doe',
-                                ))))),
+                            child: EnsureVisible(
+                              focusNode: _focusUser,
+                              child: new TextField(
+                                  controller: ctrlUser,
+                                  focusNode: _focusUser,
+                                  keyboardType: TextInputType.text,
+                                  decoration: new InputDecoration(
+                                    border: InputBorder.none,
+                                    hintText: 'john.doe',
+                                  )),
+                            )))),
                 new SizedBox(height: 10.0),
                 new Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -88,13 +85,17 @@ class _ChangePasswordState extends State<ChangePassword> {
                         child: new Padding(
                             padding:
                                 const EdgeInsets.only(left: 8.0, right: 8.0),
-                            child: new TextField(
-                                controller: ctrlOldPwd,
-                                keyboardType: TextInputType.text,
-                                decoration: new InputDecoration(
-                                  border: InputBorder.none,
-                                  hintText: '.....',
-                                ))))),
+                            child: EnsureVisible(
+                              focusNode: _focusOldPwd,
+                              child: new TextField(
+                                  controller: ctrlOldPwd,
+                                  focusNode: _focusOldPwd,
+                                  keyboardType: TextInputType.text,
+                                  decoration: new InputDecoration(
+                                    border: InputBorder.none,
+                                    hintText: '.....',
+                                  )),
+                            )))),
                 new SizedBox(height: 10.0),
                 new Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -112,13 +113,17 @@ class _ChangePasswordState extends State<ChangePassword> {
                         child: new Padding(
                             padding:
                                 const EdgeInsets.only(left: 8.0, right: 8.0),
-                            child: new TextField(
-                                controller: ctrlNewPwd,
-                                keyboardType: TextInputType.number,
-                                decoration: new InputDecoration(
-                                  border: InputBorder.none,
-                                  hintText: '.....',
-                                ))))),
+                            child: EnsureVisible(
+                              focusNode: _focusNewPwd,
+                              child: new TextField(
+                                  controller: ctrlNewPwd,
+                                  focusNode: _focusNewPwd,
+                                  keyboardType: TextInputType.number,
+                                  decoration: new InputDecoration(
+                                    border: InputBorder.none,
+                                    hintText: '.....',
+                                  )),
+                            )))),
                 new SizedBox(height: 10.0),
                 new Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -136,13 +141,17 @@ class _ChangePasswordState extends State<ChangePassword> {
                         child: new Padding(
                             padding:
                                 const EdgeInsets.only(left: 8.0, right: 8.0),
-                            child: new TextField(
-                                controller: ctrlConfirmPwd,
-                                keyboardType: TextInputType.url,
-                                decoration: new InputDecoration(
-                                  border: InputBorder.none,
-                                  hintText: '.....',
-                                ))))),
+                            child: EnsureVisible(
+                              focusNode: _focusConfirmPwd,
+                              child: new TextField(
+                                  controller: ctrlConfirmPwd,
+                                  focusNode: _focusConfirmPwd,
+                                  keyboardType: TextInputType.url,
+                                  decoration: new InputDecoration(
+                                    border: InputBorder.none,
+                                    hintText: '.....',
+                                  )),
+                            )))),
                 new SizedBox(height: 10.0),
                 new Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -160,13 +169,17 @@ class _ChangePasswordState extends State<ChangePassword> {
                         child: new Padding(
                             padding:
                                 const EdgeInsets.only(left: 8.0, right: 8.0),
-                            child: new TextField(
-                                controller: ctrlPin,
-                                keyboardType: TextInputType.url,
-                                decoration: new InputDecoration(
-                                  border: InputBorder.none,
-                                  hintText: '....',
-                                ))))),
+                            child: EnsureVisible(
+                              focusNode: _focusPin,
+                              child: new TextField(
+                                  controller: ctrlPin,
+                                  focusNode: _focusPin,
+                                  keyboardType: TextInputType.url,
+                                  decoration: new InputDecoration(
+                                    border: InputBorder.none,
+                                    hintText: '....',
+                                  )),
+                            )))),
                 SizedBox(height: 20.0),
                 new Row(
                   children: <Widget>[
