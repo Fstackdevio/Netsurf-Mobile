@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netsurf_pro/pages/changepwd.dart';
 
 class SettingsScreen extends StatefulWidget {
   final choice;
@@ -8,7 +9,8 @@ class SettingsScreen extends StatefulWidget {
   final userId;
   final appId;
 
-  SettingsScreen(this.choice, this.userId, this.appId, this.userImage, this.userName, this.wish);
+  SettingsScreen(this.choice, this.userId, this.appId, this.userImage,
+      this.userName, this.wish);
   @override
   _SettingsScreenState createState() => new _SettingsScreenState();
 }
@@ -144,7 +146,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                               fontWeight: FontWeight.w700),
                         ),
                         InkWell(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => ChangePassword()));
+                          },
                           child: Text(
                             'Edit',
                             style: TextStyle(
@@ -190,7 +195,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         )
                       ],
                     )),
-                    new Container(
+                new Container(
                   padding: EdgeInsets.only(left: 40, right: 40),
                   child: new Divider(
                     height: 1.0,
@@ -350,7 +355,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             fontWeight: FontWeight.w700),
                       ),
                     )),
-                    new Container(
+                new Container(
                   padding: EdgeInsets.only(left: 40, right: 40),
                   child: new Divider(
                     height: 1.0,
@@ -418,7 +423,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       activeColor: Colors.blueAccent,
                       inactiveColor: Colors.grey,
                     )),
-                    new Container(
+                new Container(
                   padding: EdgeInsets.only(left: 40, right: 40),
                   child: new Divider(
                     height: 1.0,
