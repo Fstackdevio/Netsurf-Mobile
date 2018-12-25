@@ -75,7 +75,7 @@ class _ShareDataState extends State<ShareData> {
                         child: new RaisedButton(
                       child: const Text("Done"),
                       elevation: 4.0,
-                      onPressed: (null),
+                      onPressed: () => null,
                       splashColor: Colors.blue,
                     )),
                   )
