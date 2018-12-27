@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netsurf_pro/pages/changepwd.dart';
+import 'package:netsurf_pro/pages/ewalletsync.dart';
 
 class SettingsScreen extends StatefulWidget {
   final choice;
@@ -215,9 +216,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     padding: const EdgeInsets.only(
                         left: 30.0, right: 30.0, top: 30.0),
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(builder:(context) => EwalletSync()  ));
+                      },
                       child: new Text(
-                        'Linked eWallet',
+                        'E-Wallet sync',
                         style: TextStyle(
                             color: Colors.grey,
                             fontSize: 20.0,
