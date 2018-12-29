@@ -16,6 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: new AppBar(
           elevation: 0.0,
           backgroundColor: Colors.blue,
+          automaticallyImplyLeading: false,
           title: Text(
             'Netsurf',
             style: TextStyle(color: Colors.white),

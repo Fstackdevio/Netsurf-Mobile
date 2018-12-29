@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:netsurf_pro/models/history_card.dart';
 
 
 class LoginHistory extends StatefulWidget{
@@ -24,7 +25,7 @@ class _LoginHistoryState extends State<LoginHistory>{
                   new Column(
                     children: <Widget>[
                       new Padding(
-                          padding: EdgeInsets.only(top: 20.0),
+                          padding: EdgeInsets.only(top: 170.0),
                           child: Container(
                             alignment: Alignment.center,
                             child: new Column(
@@ -32,7 +33,7 @@ class _LoginHistoryState extends State<LoginHistory>{
                                 new Container(
                                   decoration: BoxDecoration(
                                     color: Colors.white,
-                                    //borderRadius: BorderRadius.all(radius: 60.0),
+                                    borderRadius: BorderRadius.all(Radius.circular(500.0)),
                                   ),
                                   child: Text('testing'),
                                 ),
@@ -57,7 +58,8 @@ class _LoginHistoryState extends State<LoginHistory>{
                     ],
                   )
               ],
-            )
+            ),
+           // HistoryCard()
           ],
         ),
       ),
