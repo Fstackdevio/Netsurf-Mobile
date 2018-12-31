@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netsurf_pro/pages/nofystyle.dart';
+import 'package:netsurf_pro/tools/nofystyle.dart';
 
 class NotificationScreen extends StatefulWidget {
   @override

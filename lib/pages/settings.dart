@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:netsurf_pro/pages/changepwd.dart';
 import 'package:netsurf_pro/pages/ewalletsync.dart';
+import 'package:netsurf_pro/pages/login.dart';
 
 class SettingsScreen extends StatefulWidget {
   final choice;
@@ -217,7 +218,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         left: 30.0, right: 30.0, top: 30.0),
                     child: InkWell(
                       onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(builder:(context) => EwalletSync()  ));
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => EwalletSync()));
                       },
                       child: new Text(
                         'E-Wallet sync',
@@ -447,7 +449,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     padding: const EdgeInsets.only(
                         left: 30.0, right: 30.0, top: 30.0),
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => LoginScreen()));
+                      },
                       child: new Text(
                         'Logout of kalango.michael',
                         style: TextStyle(
