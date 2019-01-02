@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netsurf_pro/pages/changepwd.dart';
-import 'package:netsurf_pro/pages/ewalletsync.dart';
+import 'package:netsurf_pro/tools/ewalletsync.dart';
 import 'package:netsurf_pro/pages/login.dart';
 
 class SettingsScreen extends StatefulWidget {

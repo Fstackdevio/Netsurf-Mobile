@@ -5,7 +5,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'ApiRequest.g.dart';
 
 @JsonSerializable()
-class ApiRequest extends Object with _$ApiRequestSerialMixin {
+class ApiRequest extends Object with _$ApiRequestSerializerMixin {
   String operation;
   User user;
   Quota quota;

@@ -13,8 +13,8 @@ ApiResponse _$ApiResponseFromJson(Map<String, dynamic> json) => new ApiResponse(
 abstract class _$ApiResponseSerializerMixin {
   String get result;
   String get message;
-  String get user;
-  String get quota;
+  User get user;
+  Quota get quota;
 
   Map<String, dynamic> toJson() => <String, dynamic>{
         'result': result,
